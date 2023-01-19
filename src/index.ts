@@ -8,7 +8,7 @@ type DrainHandler = ()=> any;
 
 type ErrorHandler<T> = (err: Error, payload: T)=> any;
 
-export class Sequentq<T = any> {
+export class SequentQ<T = any> {
     private items: { payload: T, cb?: CallbackHandler }[] = [];
 
     private isRunning = false;

@@ -1,6 +1,6 @@
 {
   "name": "sequentq",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple sequential async queue for JavaScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
