@@ -69,6 +69,16 @@ export class SequentQ<T = any> {
         return this;
     }
 
+    public unshift(payload: T, cb?: CallbackHandler) {
+      this.items.unshift({ payload, cb });
+
+      if (!this.isRunning) {
+          setImmediate(() => this.run());
+      }
+
+      return this;
+  }
+
     public onError(handler: ErrorHandler<T>) {
         this.errorHandlers.add(handler);
 
