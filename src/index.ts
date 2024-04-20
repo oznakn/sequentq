@@ -59,6 +59,10 @@ export class SequentQ<T = any> {
         }
     }
 
+    public isEmpty() {
+        return this.items.length === 0;
+    }
+
     public push(payload: T, cb?: CallbackHandler) {
         this.items.push({ payload, cb });
 
